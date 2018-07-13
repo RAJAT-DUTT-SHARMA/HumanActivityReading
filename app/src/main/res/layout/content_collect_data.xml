@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_collect_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollectDataActivity">
+
+<RelativeLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/container">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="Choose Activity"
+        android:id="@+id/chooseActivity"
+        android:textSize="20sp"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity"
+        android:layout_toEndOf="@id/chooseActivity"/>
+<Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startMonitoring"
+        android:layout_below="@id/chooseActivity"
+        android:layout_centerHorizontal="true"
+        android:text="START"/>
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startMonitoring"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+    <Button
+        android:id="@+id/stopMonitoring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="STOP"
+        />
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
